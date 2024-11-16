@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    Template t("title", "<div> Gay </div>");
+    Template t("title", "<div> Test </div>");
     string s = "TOP: ";
     cout << (s << t);
 
