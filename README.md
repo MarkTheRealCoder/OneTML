@@ -42,6 +42,7 @@ What does this library do to achieve this goal?
 
 - [Create a simple HTML page](#create-a-simple-html-page)
 - [Create a simple HTML page with a component](#create-a-simple-html-page-with-a-component)
+- [Create a simple HTML page with two nested components](#create-a-simple-html-page-with-two-nested-components)
 - [Create a simple HTML page with a variable](#create-a-simple-html-page-with-a-variable)
 - [Create a simple HTML page with a static variable](#create-a-simple-html-page-with-a-static-variable)
 - [Create a simple HTML page with a control flow statement](#create-a-simple-html-page-with-a-control-flow-statement)
@@ -126,6 +127,68 @@ What does this library do to achieve this goal?
         ...
     }
     ```
+
+#### Create a simple HTML page with two nested components
+
+1. Create a new file called 'myComponent.html' inside a predefined folder defined inside library configs and write the following code:
+    ```HTML
+    <component name="myComponent">
+        <p>This is a component</p>
+        <include placeholder="anotherComponent"></include>
+    </component>
+   
+    <component name="myNestedComponent">
+        <p>This is a nested component</p>
+    </component>
+    ```
+
+2. Create a new file called 'index.html' and write the following code:
+    ```HTML
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>OneTML Example</title>
+        </head>
+        <body>
+            <h1>Hello, World!</h1>
+            <include component="myComponent">
+                <into placeholder="anotherComponent">
+                    <include component="myNestedComponent"></include>
+                </into>
+            </include>
+        </body>
+    </html>
+    ```
+
+3. In your C++ code, include the library and render the HTML page as follows:
+    ```C++
+    using namespace onetml;
+   
+    int main() {
+        ...
+        // Create a new renderer
+        Renderer renderer;
+        
+        // Render the HTML page
+        HTMLPage page = renderer.render("path_to_your_html_folder/index.html");
+        ...
+    }
+    ```
+    The output will be:
+    ```HTML
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>OneTML Example</title>
+        </head>
+        <body>
+            <h1>Hello, World!</h1>
+            <p>This is a component</p>
+            <p>This is a nested component</p>
+        </body>
+    </html>
+    ```
+
 
 #### Create a simple HTML page with a variable
 
