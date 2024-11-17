@@ -1,15 +1,8 @@
-//
-// Created by marco on 03/11/2024.
-//
-
-#include "components/Template.h"
 #include <iostream>
+#include "config/Resolver.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
-    Template t("title", "<div> Test </div>");
-    string s = "TOP: ";
-    cout << (s << t);
-
+ Resolver::getInstance()->resolve();
 }

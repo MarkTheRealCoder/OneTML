@@ -2,7 +2,7 @@
 
 
 # OneTML
-A C++ library to create HTML pages without rewriting not a single piece of code.
+A C++ library for generating HTML pages applying DRY principles.
 
 
 ### Supported languages

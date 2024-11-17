@@ -1,0 +1,14 @@
+{
+  "basedir": "path_to_the_folder_of_this_file",
+  "html": {
+    "components": "$basedir/path_to_your_html_components_folder",
+    "templates": "$basedir/path_to_your_html_templates_folder",
+    "outdir": "$basedir/path_to_your_output_folder"
+  },
+  "js": {
+    "components": "$basedir/path_to_your_js_components_folder"
+  },
+  "constants": {
+    "default_propic": "$basedir/path_to_default_propic/default_propic.png"
+  }
+}
