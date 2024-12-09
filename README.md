@@ -388,7 +388,7 @@ The configuration file must be named `onetml.config.json`.
 The configuration file can contain the following parameters:
 ```JSON
 {
-    "basedir": "path_to_the_folder_of_this_file",
+    "basedir": "This constant holds the path to the root of the project",
     "html": {
         "components": "$basedir/path_to_your_html_components_folder",
         "templates": "$basedir/path_to_your_html_templates_folder",
