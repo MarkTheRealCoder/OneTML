@@ -9,7 +9,7 @@ A C++ library for generating HTML pages applying DRY principles.
   - [ ] Java 
   - [ ] Python
   - [ ] Javascript/Typescript
-  - [x] C
+  - [ ] C
   - [x] C++
 
 
